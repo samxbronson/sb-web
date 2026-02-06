@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>SAM BRONSON</title>
-  <link rel="icon" type="image/png" href="https://i.postimg.cc/hGD4q6hg/image.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,15 +28,6 @@
     --wrap-w: 520px;
     --clock-location-size: clamp(14px, 2.2vw, 18px);
     --clock-size: clamp(38px, 7.5vw, 64px);
-    }
-
-    [data-theme="light"] {
-      --bg: #f5f5f5;
-      --card: rgba(255,255,255,.76);
-      --card-solid: rgb(255,255,255);
-      --border: rgb(225,225,225);
-      --text: rgb(28,28,28);
-      --muted: rgb(100,100,100);
     }
 
     *{ box-sizing:border-box; }
@@ -90,71 +81,6 @@
       display: block;
     }
     
-    .logo .logo-dark {
-      display: block;
-    }
-    
-    .logo .logo-light {
-      display: none;
-    }
-    
-    [data-theme="light"] .logo .logo-dark {
-      display: none;
-    }
-    
-    [data-theme="light"] .logo .logo-light {
-      display: block;
-    }
-
-    /* Dark mode toggle */
-    .theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--card);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(10px);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
-      z-index: 100;
-    }
-
-    .theme-toggle:hover {
-      transform: scale(1.05);
-      border-color: var(--muted);
-    }
-
-    .theme-toggle svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--text);
-      transition: opacity 200ms ease;
-    }
-
-    .theme-toggle .sun-icon {
-      position: absolute;
-      opacity: 0;
-    }
-
-    .theme-toggle .moon-icon {
-      position: absolute;
-      opacity: 1;
-    }
-
-    [data-theme="light"] .theme-toggle .sun-icon {
-      opacity: 1;
-    }
-
-    [data-theme="light"] .theme-toggle .moon-icon {
-      opacity: 0;
-    }
-
     /* Socials (brand-accurate filled white SVGs) */
     .social{
       display: inline-flex;
@@ -180,20 +106,10 @@
       transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
     }
 
-    [data-theme="light"] .social a {
-      border: 1px solid rgba(0,0,0,0.15);
-      background: rgba(0,0,0,0.04);
-    }
-
     .social a:hover{
       transform: translateY(-1px);
       background: rgba(255,255,255,0.07);
       border-color: rgba(255,255,255,0.35);
-    }
-
-    [data-theme="light"] .social a:hover {
-      background: rgba(0,0,0,0.08);
-      border-color: rgba(0,0,0,0.25);
     }
 
     .social svg{
@@ -202,11 +118,6 @@
       display: block;
       fill: #fff;
       opacity: 0.9;
-    }
-
-    [data-theme="light"] .social svg {
-      fill: #000;
-      opacity: 0.85;
     }
 
     /* Optical normalization: X usually looks smaller */
@@ -248,11 +159,6 @@
       transform: translateY(-2px);
       background: rgba(28,28,28,.92);
       border-color: rgb(70,70,70);
-    }
-
-    [data-theme="light"] .card-link:hover {
-      background: rgba(255,255,255,.95);
-      border-color: rgb(180,180,180);
     }
 
     .card-left{
@@ -321,10 +227,6 @@
       overflow-wrap: break-word;
     }
 
-    [data-theme="light"] .location {
-      color: rgba(0,0,0,.70);
-    }
-
     .clock{
       font-size: var(--clock-size);
       line-height: 1;
@@ -364,167 +266,11 @@
       transition: background-color 180ms ease, border-color 180ms ease;
     }
 
-    [data-theme="light"] .cta {
-      background: rgba(255,255,255,.9);
-      border: 1px solid rgb(225,225,225);
-      color: rgb(28,28,28);
-    }
-
     .card-link:hover .cta{
       background: rgba(40,40,40,.9);
       border-color: rgb(70,70,70);
     }
 
-    [data-theme="light"] .card-link:hover .cta {
-      background: rgba(245,245,245,.9);
-      border-color: rgb(180,180,180);
-    }
-
-    /* YouTube embed card */
-    .video-card {
-      width: 100%;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 14px;
-      backdrop-filter: blur(10px);
-      transition: background-color 180ms ease, border-color 180ms ease;
-      overflow: hidden;
-    }
-
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      height: 0;
-      overflow: hidden;
-      border-radius: 8px;
-      background: var(--card-solid);
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* Optional: Add hover effect to video card */
-    .video-card:hover {
-      background: rgba(28, 28, 28, 0.85);
-      border-color: rgb(60, 60, 60);
-    }
-
-    [data-theme="light"] .video-card:hover {
-      background: rgba(255, 255, 255, 0.92);
-      border-color: rgb(200, 200, 200);
-    }
-
-    /* Substack subscribe widget */
-    .substack-widget {
-      width: 100%;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 14px;
-      backdrop-filter: blur(10px);
-      transition: background-color 180ms ease, border-color 180ms ease;
-    }
-
-    .substack-form {
-      display: flex;
-      gap: 8px;
-      width: 100%;
-    }
-
-    .substack-input {
-      flex: 1;
-      height: 44px;
-      padding: 0 16px;
-      background: rgba(0, 0, 0, 0.3);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--text);
-      font-size: 14px;
-      font-family: inherit;
-      transition: border-color 180ms ease, background-color 180ms ease;
-    }
-
-    .substack-input::placeholder {
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    [data-theme="light"] .substack-input {
-      background: rgba(0, 0, 0, 0.04);
-    }
-
-    [data-theme="light"] .substack-input::placeholder {
-      color: rgba(0, 0, 0, 0.5);
-    }
-
-    .substack-input:focus {
-      outline: none;
-      border-color: rgba(255, 255, 255, 0.4);
-      background: rgba(0, 0, 0, 0.4);
-    }
-
-    [data-theme="light"] .substack-input:focus {
-      border-color: rgba(0, 0, 0, 0.3);
-      background: rgba(0, 0, 0, 0.08);
-    }
-
-    .substack-button {
-      height: 44px;
-      padding: 0 24px;
-      background: rgba(28,28,28,.9);
-      border: 1px solid rgb(41,41,41);
-      border-radius: 8px;
-      color: rgb(242,242,242);
-      font-size: 14px;
-      font-weight: 600;
-      font-family: inherit;
-      cursor: pointer;
-      transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
-      white-space: nowrap;
-    }
-
-    .substack-button:hover {
-      background: rgba(40,40,40,.9);
-      border-color: rgb(70,70,70);
-      transform: translateY(-1px);
-    }
-
-    .substack-button:active {
-      transform: translateY(0);
-    }
-
-    [data-theme="light"] .substack-button {
-      background: rgba(255,255,255,.9);
-      border: 1px solid rgb(225,225,225);
-      color: rgb(28,28,28);
-    }
-
-    [data-theme="light"] .substack-button:hover {
-      background: rgba(245,245,245,.9);
-      border-color: rgb(180,180,180);
-    }
-
-    @media (max-width: 520px) {
-      .substack-form {
-        gap: 6px;
-      }
-      
-      .substack-input {
-        font-size: 13px;
-        padding: 0 14px;
-      }
-      
-      .substack-button {
-        padding: 0 20px;
-        font-size: 13px;
-      }
-    }
 
   </style>
 </head>
@@ -532,21 +278,10 @@
 <body>
   <div class="bg" aria-hidden="true"></div>
 
-  <!-- Dark/Light Mode Toggle -->
-<!--  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/>
-    </svg>
-    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/>
-    </svg>
-  </button> -->
-
   <main class="page">
     <div class="wrap">
       <div class="logo">
-        <img class="logo-dark" src="https://i.postimg.cc/T3k7LNT1/sb-gif-ezgif-com-whitegif.gif" alt="SAM BRONSON"/>
-        <img class="logo-light" src="https://i.postimg.cc/Njg7JZTP/sb-gif-ezgif-com-optimize.gif" alt="SAM BRONSON"/>
+        <img src="assets/sb-spinning.gif" alt="SAM BRONSON"/>
       </div>
 
     <!-- Brand-accurate social icons -->
@@ -623,10 +358,6 @@
     </div>
   </main>
 
-  <!--<footer>
-    © SAM BRONSON 2026
-  </footer> -->
-
   <script>
     (function() {
     const parts = ['contact', '@', 'sambronson', '.', 'com'];
@@ -659,27 +390,10 @@
       document.getElementById('location').textContent = formatted;
     }
 
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('themeToggle');
-    const htmlElement = document.documentElement;
-    
-    // Check for saved theme preference or default to dark
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    htmlElement.setAttribute('data-theme', currentTheme);
-
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-      });
-    }
-
     updateClock();
     updateLocation();
     setInterval(updateClock, 1000);
+
   </script>
 </body>
 </html>
